@@ -1,0 +1,84 @@
+import java.util.Scanner;
+public class BankSimulator
+{
+  private Account account;
+  public BankSimulator()
+  {
+    getInfo();
+    menu();
+    withdraw();
+  }
+  public void getInfo()
+  {
+    System.out.println("Welcome to Sumya's Bank!");
+    System.out.println("What is your name?");
+    Scanner s = new Scanner(System.in);
+    String name = s.nextLine();
+    System.out.println("How much would you like to deposit in your account?");
+    double balance = s.nextDouble();
+    account = new Account(name, balance);
+
+  }
+  public void menu()
+  {
+    System.out.println("Would you like to \n" + 
+                       "1. Deposit \n" +
+                       "2. Withdraw \n" +
+                       "3. Exit");
+    Scanner s = new Scanner(System.in);
+    int option = s.nextInt();
+    if(option==1) deposit();
+    else if(option==2) withdraw();
+    else if(option==3) System.exit(0);
+    else menu();
+  }
+  public void deposit()
+  {
+    System.out.println ("How much would you like to deposit?");
+    Scanner s = new Scanner(System.in);
+    double deposit = s.nextDouble();
+      deposit();
+    {
+      System.out.println ("Are you sure?"); 
+      s = new Scanner(System.in);
+      if (s.nextLine().equals("yes"))
+      {
+        // account.deposit(deposit);
+        System.out.println ("You have completed a deposit of:  $" + deposit);
+        reportBalance();
+      }
+    }
+    menu();
+  }
+  public void withdraw()
+  {
+    System.out.println ("How much would you like to withdraw?");
+    Scanner s = new Scanner(System.in);
+    double withdrawal = s.nextDouble();
+    if (!(withdrawal >= account.getBalance()))
+    {
+    System.out.println ("Are you sure?");
+      s = new Scanner(System.in);
+      if (s.nextLine().equals("yes"))
+      {
+        account.withdraw(withdrawal);
+        System.out.println ("You withdrew $" + withdrawal);
+        reportBalance();
+      }
+    }
+    else
+    {
+       System.out.println ("You don't have enough money to withdraw this amount.");
+      withdraw();
+    }
+    menu();
+  }
+  public void reportBalance()
+  {
+    System.out.println("Your balance is $" + account.getBalance());
+  }
+  public void calculationTotals (double withdrawal, double deposit){
+     newDep == deposit -= withdrawal;
+    System.out.println(" Your total amount used from you deposit is" + newDep);
+  }
+}
