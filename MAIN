@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main {
+  public void main (String [] args){
+  Account myAcc = new Account(193.76);
+  myAcc.n = "spongebob";
+  System.out.println ("My name is" + myAcc.n + "and my balance is" + myAcc.b); //dot stuff
+  System.out.println(obj.toString());
+  System.out.println (account);
+  }
+    public static void withdraw()
+    {
+        System.out.println ("How much would you like to withdraw?") ;
+         withdraw = sc.nextLine();
+        if (withdraw >= balance)
+        {
+          System.out.println ("You don't have enough money to withdraw this amount"); 
+        }
+        else 
+          System.out.println ("Are you sure?") ; 
+       withdraw_num ++ ;
+        if (answer = yes)
+          balance -= withdraw ;
+          System.out.println ("Balance withdrawn!");
+    }
+   public static void main (String[] args) 
+    {
+      Scanner sc = new Scanner(System.in);
+      deposit_num= null ;
+      withdraw_num = null ;
+      System.out.println ("Please enter your username");
+      String username = sc.nextLine();
+      System.out.println ("Welcome "  + username + "." ); // concatenate stuff
+      System.out.println ("Would you like to see your balance?");
+      if(balance == null){
+        System.out.println ("No balance");
+      }
+      else
+      System.out.println ("your balance is " + balance);
+      System.out.println ("Would you like to withdraw ?");
+      if (answer == yes){
+        withdraw();
+      }
+    else
+        System.out.println ("Would you like to deposit?");
+         if (answer= yes)
+           System.out.println ("Alrighty, how much would how like to deposit?");
+            if(answer = yes) {
+              deposit = sc.nextLine ;
+              balance += deposit ;
+              deposit_num ++ ;
+            }
+            if (balance >= Integer.MAX_VALUE){
+             System.out.println("We cannot assign this much money to one single account, please make another one.");
+            }
+     sc.close() ;    
+    }
+  }
